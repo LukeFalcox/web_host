@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de cadastro</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="shortcut icon" href="favicon_io" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/icon/favicon_io/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div id="main-conteiner">
+        <h1>Cadastro</h1>
+        <form id="register-form">
+            <div class="full-box">
+                <ion-icon name="people-outline"></ion-icon>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="Name" placeholder="Digite seu nome">
+            </div>
+            <div class="full-box">
+                <ion-icon name="people-outline"></ion-icon>
+                <label for="lastname">Sobrenome</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome">
+            </div>
+            <div class="full-box">
+                <ion-icon name="mail-outline"></ion-icon>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="full-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <div class="full-box">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label for="passconfirm">Confirme sua senha</label>
+                <input type="password" name="passconfirm" id="passconfirm" placeholder="Confirme sua senha">
+            </div>
+            <div class="termo">
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree" id="agree-label">Eu li e aceito os <a href="#">termos de uso</a></label>
+            </div>
+                <input type="submit" value="Registrar">
+            <a href="login.html" id="conta">Ja existe uma conta?</a>
+        </form>
+    </div>
+    <p class="error-validation template"></p>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 
