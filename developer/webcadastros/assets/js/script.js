@@ -2,16 +2,16 @@
 // - e Dentro desse array crie um objeto onde guarde as informações do cliente Feito
 // - Assim que criado faça ele guardar novas informações Feito
 //Quando um novo Cliente se registrar peça para ele criar um objeto automaticamente Feito
-var form = document.getElementById("register-form");
+const form = document.getElementById('register-form');
 
 form.addEventListener("submit", (e) => {
     //essse codigo faz que a pagina nao recarregue
     e.preventDefault();
 
-    var Name = document.getElementById("Name").value;
-    var lastname = document.getElementById("lastname").value;
-    var email = document.getElementById("email").value;
-    var password= document.getElementById("password").value;
+    const Name = document.getElementById("Name").value;
+    const lastname = document.getElementById("lastname").value;
+    const email = document.getElementById("email").value;
+    const password= document.getElementById("password").value;
     //Os valores estao rodando
 
     //Array de objeto
