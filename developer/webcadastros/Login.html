@@ -13,16 +13,17 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                <form id="register-form">
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" placeholder="Digite aqui Email" autofocus>
+                        <input type="email" name="email" placeholder="Digite aqui Email" required id="email"> 
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" placeholder="Digite aqui Senha" autofocus>
+                        <input type="password" placeholder="Digite aqui Senha" required id="password">
                     </div>
+                    <input type="submit" value="Login" id="button">
                         <a href="cadastro.html" target="_blank" class="cadastro">Cadastra-se</a>
  
                 </form>
@@ -30,7 +31,7 @@
         </div>
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="assets/js/scriptv2.js">
 </body>
 </html>

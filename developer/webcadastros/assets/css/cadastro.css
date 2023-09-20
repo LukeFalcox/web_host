@@ -70,7 +70,7 @@ form {
     border-bottom: 2px solid #fff;
 } 
 
-button{
+#envio{
     width: 100%;
     height: 30px;
     border-radius: 20px;
@@ -79,6 +79,7 @@ button{
     outline: none;
     cursor: pointer;
     font-size: 1em;
+    color: black;
     margin-top: 10px;
 }
 .full-box ion-icon{

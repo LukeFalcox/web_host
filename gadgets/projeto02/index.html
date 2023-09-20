@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- 
+
+    https://blog.fellyph.com.br/tutoriais/utilizando-localstorage-para-armazenar-dados-no-device/
+
+    https://www.youtube.com/watch?v=FXlAf_iIDeo&ab_channel=MatheusBattisti-HoradeCodar
+
+    https://www.youtube.com/watch?v=6IF0eX9R_v0&ab_channel=CodingMindBrasil
+
+    https://www.youtube.com/watch?v=uXC2zXaa5_E&ab_channel=CFBCursos
+
+    https://www.youtube.com/watch?v=De5np8phQxo&ab_channel=Rocketseat
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script.js">
+    <title>JS - Local Storage</title>
+
+    <!-- <script src="./script.js" defer></script> -->
+
+    <!-- <script>
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('name')) {
+                sayMyName()
+            } else {
+                whatsYourName()
+            }
+        });
+
+        function whatsYourName() {
+            document.body.innerHTML = '';
+            // criando um input para cadastrar o nome;
+            const inputName = document.createElement('input');
+            inputName.type = 'text';
+            inputName.placeholder = 'Digite seu nome';
+            inputName.id = 'nome';
+            document.body.appendChild(inputName);
+
+            // criando saveButton
+            const saveButton = document.createElement('button');
+            saveButton.innerHTML = 'Salvar';
+            document.body.appendChild(saveButton);
+
+            // adicionando listener para salvar a informação
+            saveButton.addEventListener('click', saveName);
+        }
+
+
+        function sayMyName() {
+            document.body.innerHTML = '';
+            // criando mensagem
+            const welcomeMessage = document.createElement('h1');
+            welcomeMessage.innerText = 'Olá' + localStorage.getItem("name");
+
+            // criando removeButton
+            const removeButton = document.createElement('button');
+            removeButton.innerHTML = 'Excluir';
+            document.body.appendChild(removeButton);
+
+            // adicionando o listener para remover informação
+            removeButton.addEventListener('click', removeName);
+        }
+
+        function removeName() {
+            if (localStorage.getItem('name')) {
+                localStorage.removeItem('name');
+                whatsYourName()
+            }
+        }
+
+        function saveName() {
+            var nome = document.getElementById('nome').value;
+            localStorage.setItem('name', nome)
+            sayMyName();
+        }
+        
+    </script> -->
+
+    <style>
+        /*===============================<<<< SETTINGS >>>>==================================*/
+        @charset "UTF-8";
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+        :root {
+            /* ------------------- CORES E FUNDOS SITE --------------------------- */
+            --corb: #000000;
+            --corw: #ffffff;
+            --corf: #f2f2f2;
+            --txt0: rgba(14, 29, 115, 0.5);
+
+            /*==== TEMPLATE ESCURO [cor0 e cor1 (escuro) / cor2 (escuro) / cor3 e cor4 (claro)] ====*/
+            --imgTop: url("../x_images/pequeno/logo_encode_1.png");
+            --txt1: rgba(88, 192, 204, 0.945);
+            --txt2: rgba(202, 168, 127, 0.959);
+            --box5: rgba(242, 242, 242, 0.205);
+            --cor0: #142b59;
+            --cor1: #1a3073;
+            --cor2: #f2f2f2;
+            --cor3: #f27b35;
+            --cor4: #f2561d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--corf);
+            color: var(--txt0);
+            font: var(--fnttam) var(--fntpad);
+        }
+
+        header {
+            position: relative;
+            margin: 5px auto;
+            padding: 15px;
+            width: 90%;
+            background-color: var(--cor3);
+            border-radius: 1px 1px 15px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <p>
+            <h1>Local Storage - JavaScript</h1>
+            </p>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <div>
+                <h2>
+                    <p>Principal Web - 001</p>
+                </h2>
+            </div>
+
+        </section>
+
+        <section>
+            <div>
+                <h2>
+                    <p>Principal Web - 002</p>
+                </h2>
+            </div>
+            <div>
+                <button onclick="limpaDados()">Botao</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <h4>
+                <p>Rodapé</p>
+            </h4>
+        </div>
+    </footer>
+
+</body>
+
+</html>

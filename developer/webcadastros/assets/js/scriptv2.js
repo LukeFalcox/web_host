@@ -1,21 +1,29 @@
-const input = document.querySelector('#envio')
-const pont = document.querySelector('src')
-input.addEventListener('change', (e) => function() {
+const Email = document.querySelector("#email");//Aqui pega o campo do nome e atribui a uma variavel
+const Senha = document.querySelector("#password");//Aqui pega o campo do sobrenome e atribui a uma variavel
+const form = document.querySelector('#register-form');
+localStorage.setItem('Usuarios', '[{"Email": "lukefalcox@gmail.com","Senha": "q1W@zaXS"}]')
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(this.files);
-  const arquivo = this.files[0];
+  
+  let Var1 = Email.value;
+  let Var2 = Senha.value;
+  const LstUsu = JSON.parse(localStorage.getItem('Usuarios'));
+  if (LstUsu.length>0) {
+    for (let I = 0; I < LstUsu.length; I++) {
+        if (LstUsu[I].Email === Var1) {
+            if (LstUsu[I].Senha === Var2) {
+                let usuatv = `[{"Usuario": ,"Email": "${LstUsu[I].Email}",Senha": "${LstUsu[I].Senha}",}]`
 
-  console.log(pont);
-  console.log(arquivo3);
-  const leito = new FileReader();
+                sessionStorage.setItem("usuatv", `${usuatv}`)  
+                break;
+
+            } else {
+
+                console.log("Senha Inválida");
+            }
+        } else {
+            console.log("Email Inválido");
+        }
+    }
+  }
 });
-// e.preventDefault();
-// //essse codigo faz que a pagina nao recarregue
-// const Name = document.getElementById("Name").value;//Aqui ele ta pegando o valor do input onde se encontra o id Name
-// const lastname = document.getElementById("lastname").value;//Aqui ele ta pegando o valor do input onde se encontra o id lastname
-// const email = document.getElementById("email").value;//Aqui ele ta pegando o valor do input onde se encontra o id email
-// const password= document.getElementById("password").value; //Aqui ele ta pegando o valor do input onde se encontra o id password
-// let all = [Name,lastname,email,password]//Aqui ele ta colocando o valor em array e colocando na variavel all
-// let obj = JSON.stringify(all);//aqui ele ta transformando o arquivo em objeto json
-// console.log(all)
-// console.log(obj)
